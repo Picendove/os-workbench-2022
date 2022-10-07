@@ -36,6 +36,7 @@ static struct pinfo {
   char name[100];
 } processInfos[500];
 static int number_process = 0;
+
 //初始化信息数组
 void setPid_Ppid();
 
