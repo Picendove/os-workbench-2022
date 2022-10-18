@@ -41,7 +41,7 @@ int main(const char *args) {
           splash('D');
           break;
         default: 
-          puts("undefined behavior, try \"WSAD\"");
+          puts("undefined behavior, try \"WSAD\" \n");
       } 
     }
   }
