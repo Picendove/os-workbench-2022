@@ -29,21 +29,23 @@ static void draw_tile(int x, int y, int w, int h, uint32_t color) {
 
 void splash(const char operate) {
   init();
-  if(operate == 'W' && location_y != h) {
+  if(operate == 'W' && location_y != h/16) {
     ++location_y;
   }else if(operate == 'A' && location_x != 0) {
     --location_x;
   }else if(operate == 'S' && location_y != 0) {
     --location_y;
-  }else if(operate == 'D' && location_x != w) {
+  }else if(operate == 'D' && location_x != w/16) {
     ++location_x;
   }else{;
   }
 
   for (int x = 0; x * SIDE <= w; x ++) {
     for (int y = 0; y * SIDE <= h; y++) {
-      if ((x & 1) ^ (y & 1)) {
-        draw_tile(x * SIDE, y * SIDE, SIDE, SIDE, 0xCC00ff); // white
+      if((x == location_x) && (y == location_y)) {
+        draw_tile(x * SIDE, y * SIDE, SIDE, SIDE, 0x0000ff); // blue
+      } else {
+        draw_tile(x * SIDE, y * SIDE, SIDE, SIDE, 0xffffff); // white
       }
     }
   }
