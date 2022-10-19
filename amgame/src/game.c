@@ -42,7 +42,7 @@ int main(const char *args) {
           break;
         default: 
           print_key();
-          puts("undefined behavior, try \"WSAD\" \n");
+          // puts("undefined behavior, try \"WSAD\" \n");
       } 
     }
   }
