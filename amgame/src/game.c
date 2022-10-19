@@ -28,7 +28,7 @@ int main(const char *args) {
       puts("Key pressed: ");
       if(strcmp(key_names1[event.keycode] ,"ESCAPE") == 0) {
         halt(1);
-        return 0;
+        // return 0;
       }
       switch(*key_names1[event.keycode])
       {
