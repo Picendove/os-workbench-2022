@@ -37,11 +37,7 @@ void splash(const char operate) {
     --location_y;
   }else if(operate == 'D' && location_x != w/16) {
     ++location_x;
-  }
-  // else if(operate == 'M') {
-  //   halt(0xf);
-  // }
-  else{;
+  }else{;
   }
 
   for (int x = 0; x * SIDE <= w; x ++) {
