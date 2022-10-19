@@ -41,6 +41,7 @@ int main(const char *args) {
           splash('D');
           break;
         default: 
+          print_key();
           puts("undefined behavior, try \"WSAD\" \n");
       } 
     }
